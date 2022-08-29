@@ -13,8 +13,7 @@ class Solution:
             return True
         if (not p and q) or (p and not q) or (p and q and p.val != q.val):
             return False
-        if ((p && !q) || (!p && q) || (p->val != q->val)) return false;
-        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 
 
 
